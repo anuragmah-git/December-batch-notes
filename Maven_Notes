@@ -155,3 +155,61 @@ Artifact path in local repository .m2
 
 - Package naming convention:
 	artifactId-version.jar (FOR EX. flipkart-1.1-SNAPSHOT.war)
+
+
+============
+Phase-4
+============
+
+#11: Maven Automatic Dependency resolution feature
+	
+	- Direct dependency - 
+	- Transitive dependency(hamcrest is dependency of junit and becomes transitive dependency for our code)
+
+
+
+Maven way of dependency addition, detection from different repositories.
+
+#12
+Maven repositories
+	- Central
+	- Private/Remote (Nexus/atifactrory)
+	- Local (.m2)
+
+#13
+"mvn clean"  - remove old target folder from project directory.
+	
+
+
+============
+Phase-5
+============
+
+
+#14
+Build types
+	- Complete build/Clean build/Full build
+	- Incremental build
+	- Nightly build
+	- Daily build
+	- bugfix build
+	- adhoc/unplanned/emergency builds
+
+#15
+Skipping test cases:
+	$ mvn install -DskipTests (skip test executon)
+	$ mvn install -Dmaven.test.skip=true (skip test code compilation and execution)
+
+#16
+Run only unit testing i.e 'test' life cycle phase
+	$ mvn surefire:test
+
+
+#17
+Where Maven's coordinates/GAV parameters come into picture / helpful?
+	- Decide artifact storage path in local/central/remote
+		repositories
+	- Decide jar/war names.
+	- Define a particular version of the jar file to be
+		downloaded during dependency resolution.
+
